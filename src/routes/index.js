@@ -45,7 +45,9 @@ router.post('/email', async (req, res) => {
      console.log('Email sent: ' + info.response);
     }
    });
+   res.redirect('/index.html');
 });
+
 
 module.exports = router;
 
