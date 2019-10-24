@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const nodemailer = require('nodemailer');
+const bcrypt = require('bcrypt-nodejs');
 
 router.get('/', (req, res, next) => {
   res.render('index');
@@ -18,13 +19,14 @@ router.post('/email', async (req, res) => {
         <p>${message}</p>
     `;
 
-
+    
 
   let transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
      user: 'lehj09@gmail.com',
      pass: 'terremototo111'
+     
    }
    });
    
@@ -36,6 +38,8 @@ router.post('/email', async (req, res) => {
     html: contentHTML
    
    };
+
+   
 
    
    transporter.sendMail(mailOptions, function(error, info){
