@@ -5,16 +5,22 @@
 
   
 .carl{
-  background: darkgray
-  heigh
+  background: #bdc3c7;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #2c3e50, #bdc3c7);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #2c3e50, #bdc3c7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
  
 }
 
 .logo{
   background: url('/img/logo.png') no-repeat center;
-  height: 30vh;
+  height: 35vh;
   background-size: 300px;
   
+}
+
+.heroimg{
+  height: 30vh;
 }
   .banner{
     background: url('/img/fiorino.jpg') no-repeat center;
@@ -42,7 +48,7 @@
   
 }
     /*about session start*/
-.top-heading p{width: 100%; text-align: center; color: #787878; font-size: 70px; text-transform: capitalize;}
+.top-heading p{width: 100%; text-align: center; color: #787878; font-size: 60px; text-transform: capitalize;}
 
     .bg-gray{background-color: #f0f0f0;}
 
@@ -118,7 +124,7 @@
     }
     
     .contact form button:hover,.contact form button:focus{
-      background:#92bde7;
+      background: darkmagenta;
       color:#fff;
       outline:0;
       transition: background-color 2s ease-out;
