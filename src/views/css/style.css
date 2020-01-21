@@ -118,13 +118,13 @@ background: linear-gradient(to right, #2c3e50, #bdc3c7); /* W3C, IE 10+/ Edge, F
     }
     
     .contact form button{
-      background:#c9e6ff;
+      background: darkslategrey;
       border:0;
       text-transform: uppercase;
     }
     
     .contact form button:hover,.contact form button:focus{
-      background: darkmagenta;
+      background: dimgrey;
       color:#fff;
       outline:0;
       transition: background-color 2s ease-out;

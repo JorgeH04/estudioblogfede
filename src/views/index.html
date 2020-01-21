@@ -4,208 +4,138 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/css/style.css">
-    <title>Fletes Medina</title>
+    <title>Sidebar</title>
+ <!-- BOOTSTRAP -->
+ <link rel="stylesheet" href="https://bootswatch.com/4/cosmo/bootstrap.min.css">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+ 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="css/main.css">
 </head>
-
-<style>
-
-
-</style>
 <body>
-      
-    <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
-        <div class="container">
-          <a href="/" class="navbar-brand">
-            Fletes Medina
-          </a>
-          <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarCollapse">
-              <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                  <a href="/" class="nav-link">Home</a>
-                </li>
-                <li class="nav-item">
-                  <a href="/informacion" class="nav-link">Servicios</a>
-                </li>
-                
-                <li class="nav-item">
-                    <a href="/contacto" class="nav-link">Contacto</a>
-                </li>
-              </ul>
-            </div>
-  
-          
-        </div>
-      </nav>  
-     
-            <section class="carl mt-5">
-            <div class="container">
-                <div class="row top-flete mt-5">
-                    <div class="col-md-6 mt--5">
-                      <div class="logo "></div>
-                   </div>
-                   <div class="col-md-6">
+        <nav class="navbarr navbar-expand-lg px-4">
+                <a class="navbar-brand" href="#"><img src="img/logo.svg" alt=""></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNav">
+                  <span class="toggler-icon"><i class="fas fa-bars"></i></span>
+                </button>
+                <div class="collapse navbar-collapse" id="myNav">
+                  <ul class="navbar-nav mx-auto text-capitalize">
+                      {{#if user}}
                       
-                          <img src="img/logo2.jpg" class="heroimg" alt="img2">
-                        
-                   </div>
-                 </div>
-              </div>
-            </section>
-          
-                  <div class="banner "></div>
-          </div>
-        </div>
-            
-            <section id="clear">
-                    <!--why u come here start-->
-   
-   <div class="container-fluid pt-5 bg-gray pb-5">
-    <div class="container">
-      <div class="row top-heading mt-5">
-        <div class="col-md-12">
-          <p>Servicios que ofrecemos</p>
-        </div>
-      </div>
-
-
-      <div class="row mt-4">
-        <div class="col-sm-6">
-          <h3 class="hero-heading text-center">Fletes Medina</h3>
-          <p class="hero-paragraph">
-              Nuestros años en el Rubro avalan nuestra experiencia.
-              En el servicio de Fletes y Mini Fletes, asi como mundanzas contamos con profesionales altamente capacitados para el traslado de sus pertenencias.
-              Tambien todo nuestro personal esta asegurado y cuentan con CNRT,
-              para su mayor seguridad. <br/>
-       
-          
-            </p>
-          
-        </div>
-        
-        <div class="col-sm-6">
-          <img src="img/mudanza2.jpg" class="img-fluid hero-img" alt="img2">
-        </div>
-      </div>
-      
-      
-      <div class="row mt-4">
-          <div class="col-sm-6">
-              <img src="img/mudanza1.jpeg" class="img-fluid hero-img" alt="img2">
-            </div>
-        <div class="col-sm-6">
-          <h3 class="hero-heading text-center">Fletes y Mini-fletes</h3>
-          <p class="hero-paragraph">
-            Nuestra flota de vehiculos está equipada con sogas, mantas, zorras , listones y ganchos para asegurar la carga.
-El personal de peones es especializado en el manejo de muebles, electrodomesticos y todo lo transportable y asesorara al cliente con el tipo de embalaje que seria el correcto.
-También ofrecemos:
-
-<p class="hero-paragraph">• Peón de mudanza especializados en carga y descarga</p>
-<p class="hero-paragraph">• Servicio por escalera</p>
-<p class="hero-paragraph">• Fletes de todo tipo</p>
-<p class="hero-paragraph">• Mudanzas al interior</p> <br/>
-          </p>
-          
-        </div>
-       
-        
-      </div>
-      
-      
-
-
-      <div class="row mt-4">
-       
-        
-        <div class="col-sm-6">
-          <h3 class="hero-heading text-center">Mudanzas</h3>
-          <p class="hero-paragraph">
-            As a missional Cafe focused on lasting options to poverty, we turn profits into hope. We do this by creating a product you love, serving you with a smile, as well as offering all of our profits to individuals in need.<br>
-              As a missional Cafe focused on lasting options to poverty, we turn profits into hope. We do this by creating a product you love, serving you with a smile, as well as offering all of our profits to individuals in need.<br>
-              As a missional Cafe focused on lasting options to poverty, we turn profits into hope. <br/>
-              <p class="hero-paragraph">• Peón de mudanza especializados en carga y descarga</p>
-              <p class="hero-paragraph">• Servicio por escalera</p>
-              <p class="hero-paragraph">• Fletes de todo tipo</p>
-              <p class="hero-paragraph">• Mudanzas al interior</p>
-          
-            </p>
-          
-        </div>
-        <div class="col-sm-6">
-            <img src="img/mudanza3.jpg" class="img-fluid hero-img" alt="img2">
-          </div>
-    </div>
-    
-  </div>
-        
-            </section>
-        
-
-    <section class="medina">
-
-            <div class="container mt-5">
+                      <li class="nav-item active">
+                      <a class="nav-link" href="/">Home</a>
+                      </li>
+                    <li class="nav-item active">
+                      <a class="nav-link" href="/users/profile">Profile</a>
+                    </li>
+                    <li class="nav-item active">
+                      <a class="nav-link" href="/users/logout">Logout</a>
+                    </li>
                     
-                    <div class="wrapper animated bounceInLeft">
-                        <div class="company-info">
-                            <h3>Contáctenos y le responderemos a la brevedad</h3>
-                            <ul>
-                              <li><i class="fa fa-road"></i> 44 Something st</li>
-                              <li><i class="fa fa-phone"></i> (555) 555-5555</li>
-                              <li><i class="fa fa-envelope"></i> test@acme.test</li>
-                            </ul>
-                          </div>
-                      <div class="contact">
-                        <h3>Contacto</h3>
-                        <form action="/email" method="POST">
-                          <p>
-                            <label>Nombre y apellido</label>
-                            <input type="text" name="name">
-                          </p>
-                          
-                          <p>
-                            <label>Email</label>
-                            <input type="email" name="email">
-                          </p>
-                         
-                          <p class="full">
-                            <label>Consulta</label>
-                            <textarea name="message" rows="5"></textarea>
-                          </p>
-                          <p class="full">
-                            <button>Enviar</button>
-                          </p>
-                        </form>
-                      </div>
+                  {{else}}
+                    <li class="nav-item active">
+                      <a class="nav-link" href="/">home</a>
+                    </li>
+                     <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              COMPRAR
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                              <a class="dropdown-item" href="/vcortosindex">Vestidos Cortos</a>
+                              <a class="dropdown-item" href="/vlargosindex">Vestidos Largos</a>
+                              <a class="dropdown-item" href="/remerasindex">Remeras</a>
+                              <a class="dropdown-item" href="/camisasindex">Camisas y blusas</a>
+                              <a class="dropdown-item" href="/pantalonesindex">Pantalones y Polleras</a>
+                              <a class="dropdown-item" href="/sacosindex">Sacos y Kimonos</a>
+                              <a class="dropdown-item" href="/babyindex">Kids</a>
+                              <a class="dropdown-item" href="/accesoriosindex">Accesorios</a>
+                              <a class="dropdown-item" href="/outletindex">Outlet</a>
+                            </div>
+                          </li> 
+          
+                    <li class="nav-item">
+                      <a class="nav-link " href="/users/signin">Login</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="/users/signup">Register</a>
+                    </li>
+                     <div id="cart-info" class="nav-info align-items-center cart-info d-flex justify-content-between mx-lg-5">
+                      <div class="cart-btn" onclick="myFnc(this)">
+                            <a href="#">
+                                <span class="nav-icon">
+                         <i class="fas fa-cart-plus"></i>
+                        </span>
+                        <div class="cart-items"></div>
+                    </a>                    
+                 </div>
                     </div>
-                  </div>
-    </section>
-    <footer id="the-foot">
-        <div class="container-fluid pt-5 pb-5 bg-dark text-light">
-            <div class="container">
-              <div class="row">
-                <div class="col-md-6">
-      
-                  <p>Estudio Contable Ganen-Hessle.</p>
-                  <p>Teléfonos: (+54 11) 4682-2869 / 15-6800-7249</p>
-                  <p>e-mail: info@estudio-roldan.com.ar</p>
+                      
+                  </ul>
+                
+              </nav>
+
+     
+
+        <div class="container">
+            <header>
                   
-                </div>
+                <nav class="navbar" id="navID">
+                        
                 
-                
-                <div class="col-md-6">
-      
-                    <p>Av. Directorio 3833 - 7mo. Piso, Oficina "B" - C.A.B.A.</p>
-                    <p>Lunes a viernes de 9:30 a 13 hs. y de 14 a 18:00 hs.</p>
-                  
-                
-                
-          </div>
-      </footer>
+                        <ul class="side-nav">
+                                <li class="nav-item">   
+                                    <a href="#" class="site-name">Daily Tuition</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">Blog</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">Features</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">Pricing</a>
+                                </li>
+                                <li class="nav-item">
+                                        <a href="#" class="nav-link">Contact Us</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                    <i class="fab fa-facebook-f"></i>
+                                    <i class="fab fa-twitter"></i>
+                                    <i class="fab fa-instagram"></i>
+                                    <i class="fab fa-youtube"></i>
+                                    </a>
+                                </li>
+                            </ul>    
+                </nav>
+            </header>
+        </div>
+ <script>
+ 
+ function myFnc(e){
+                e.classList.toggle("show");
+ 
+                var elem = document.getElementById("navID"),
+                style = window.getComputedStyle(elem),
+                top = style.getPropertyValue("right");
+ 
+                if(top == "0px"){
+                    elem.style.right = "-260px";
+                }else{
+                    elem.style.right = "0px";
+                }
+ 
+            }
+
     
+   
+
+ </script>
+ 
 </body>
 </html>
