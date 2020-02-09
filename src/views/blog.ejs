@@ -1,0 +1,157 @@
+<%include partials/_header%>
+
+
+<div class="wrapper">
+		<nav id="sidebar">
+			<div class="sidebar-header">
+				<h3>Blog</h3>
+		 </div>
+			
+			
+			<ul class="list-unstyled components">
+			
+				<li>
+          <a href="#">Todos los posts</a>
+        </li>
+				<li>
+					<a href="#">Links</a>
+				</li>
+				<li>
+					<a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Page</a>
+					<ul class="collapse list-unstyled" id="pageSubmenu">
+						<li>
+							<a href="#">page1</a>
+						</li>
+						<li>
+							<a href="#">page2</a>
+						</li>
+						<li>
+							<a href="#">page3</a>
+						</li>
+					</ul> 
+				</li>
+				<li>
+					<a href="#">Services</a>
+				</li>
+				<li>
+					<a href="#">Contact Us</a>
+				</li>
+			</ul>
+			
+			<ul class="list-unstyled CTAs">
+				<li>
+					<a href="#" class="download">Download code</a>
+				</li>
+				<li>
+					<a href="#" class="article">article</a>
+				</li>
+			</ul>
+		</nav>
+
+
+<div class="containeer mt-5 p-4" id="cece">
+    <div class="row">
+ 
+     <% post.forEach(function (posts) { %>
+ 
+            <div class="col-md-10 mt-5">
+              <div class="card ">
+                <div class="card-body">
+                    <h1 class="card-title text-uppercase">
+                       <%= posts.nombre %>
+                    </h1>
+                    <p class="m-2">
+                        Publicado el día: <%= posts.fecha %>
+                    </p>
+                    <p class="m-2"><%= posts.mensaje %></p>
+                    <p class="m-2">
+                       Fuente:  <%= posts.fuente %>
+
+                    </p>
+                    <p class="text-muted">  <%= format(posts.timestamp)%>  </p>
+                   
+                   
+                    
+ 
+                </div>
+ 
+            </div>
+ 
+ 
+        </div>
+        <% }) %>
+ 
+    </div>
+    <div class="row">
+        <!-- pagination -->
+        <% if(pages > 0) { %> <!-- show pagination if there is pages -->
+          <nav class="mx-auto" style="margin-bottom: 50px">
+            <ul class="pagination">
+              <!-- FIRST ITEM -->
+              <% if(current == 1) { %>
+                <li class="page-item disabled">
+                  <a class="page-link" href="#">First</a>
+                </li>
+              <% } else { %>
+                <li class="page-item">
+                  <a class="page-link" href="/index/1">First</a>
+                </li>
+              <% } %>
+              <!-- ITEMS  -->
+              <% var i = (Number(current) > 5 ? Number(current) - 4 : 1) %>
+              <% if(i !== 1) { %>
+                <li class="page-item disabled">
+                  <a class="page-link" href="#">...</a>
+                </li>
+              <% } %>
+              <% for(; i <= (Number(current) + 4) && i <= pages; i++) { %>
+                <% if(i == current) { %>
+                  <li class="page-item active">
+                    <a class="page-link" href="<%= i %>">
+                      <%= i %>
+                    </a>
+                  </li>
+                <% } else { %>
+                  <li class="page-item">
+                    <a class="page-link" href="/index/<%= i %>">
+                      <%= i %>
+                    </a>
+                  </li>
+                <% } %>
+                <% if (i == Number(current) + 4 && i < pages) { %>
+                   <li class="page-item disabled">
+                     <a class="page-link" href="#">...</a>
+                   </li>
+                <% } %>
+              <% } %>
+              <!-- LAST ITEM -->
+              <% if(current == pages) { %>
+                <li class="page-item disabled">
+                  <a class="page-link" href="#">
+                    Last
+                  </a>
+                </li>
+              <% } else { %>
+                <li class="page-item">
+                  <a class="page-link" href="/index/<%= pages %>">
+                    Last
+                  </a>
+                </li>
+              <% } %>
+            </ul>
+          </nav>
+        <% } %>
+      </div>
+ </div>
+ 
+ 
+ 
+ 
+ 
+</div>
+
+
+ 
+  <%include partials/_footer%>
+
+ 

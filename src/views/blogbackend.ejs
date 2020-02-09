@@ -1,0 +1,145 @@
+<%include partials/_header%>
+
+<div class="container mt-5 pb-5">
+   	  <div class="row">
+   	  	 <div class="col-md-12">
+   	  	 	<div class="item">
+   	  	 		<img src="img/img_1.jpeg" alt="" class="img-fluid mb-3 rouded-circle" >
+   	  	 	</div>
+   	  	 </div>
+   	  	 
+<div class="container mt-5">
+
+  <div class="row">
+    <!--FORM-->
+    <div class="col-md-7">
+      <div class="card">
+        <div class="card-body">
+          <form action="/add" method="post">
+            <div class="form-group">
+              <input class="form-control" type="text" name="nombre" placeholder="Título">
+            </div>
+            <div class="form-group">
+                <input class="form-control" type="text" name="fecha" placeholder="Fecha">
+              </div>
+              <div class="form-group">
+                  <input class="form-control" type="text" name="fuente" placeholder="Fuente">
+                </div>
+            <div class="form-group">
+              <textarea id="description" cols="30" rows="10" name="mensaje" class="form-control" placeholder="Artículo"></textarea>
+            </div>
+            <button class="btn btn-primary" type="submit">
+              Add
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+
+   
+
+ 
+   <div class="container mt-5 p-4">
+        <div class="row">
+            <% for(var i = 0; i < post.length; i++) { %>
+                <div class="col-md-12">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <h3 class="card-title text-uppercase">
+                                <%= post[i].nombre %>
+                        </h3>
+                        <p class="m-2">
+                               Publicado el día: <%= post[i].fecha %>
+                        </p>
+                        
+                        <p class="m-2"><%= post[i].mensaje %></p>
+                        <p class="text-muted">                    </p>
+                        <a class="btn btn-danger" href="/delete/<%= post[i].id %>">
+                            Eliminar
+                        </a>
+                        <a class="btn btn-secondary" href="/post/edit/<%= post[i].id %>">
+                            Editar
+                        </a>
+                        
+                    </div>
+                </div>
+            </div>
+    
+            <% } %>
+        </div>
+    </div>
+    
+
+
+    <div class="row">
+        <!-- pagination -->
+        <% if(pages > 0) { %> <!-- show pagination if there is pages -->
+          <nav class="mx-auto" style="margin-bottom: 50px">
+            <ul class="pagination">
+              <!-- FIRST ITEM -->
+              <% if(current == 1) { %>
+                <li class="page-item disabled">
+                  <a class="page-link" href="#">First</a>
+                </li>
+              <% } else { %>
+                <li class="page-item">
+                  <a class="page-link" href="/indexbackend/1">First</a>
+                </li>
+              <% } %>
+              <!-- ITEMS  -->
+              <% var i = (Number(current) > 5 ? Number(current) - 4 : 1) %>
+              <% if(i !== 1) { %>
+                <li class="page-item disabled">
+                  <a class="page-link" href="#">...</a>
+                </li>
+              <% } %>
+              <% for(; i <= (Number(current) + 4) && i <= pages; i++) { %>
+                <% if(i == current) { %>
+                  <li class="page-item active">
+                    <a class="page-link" href="<%= i %>">
+                      <%= i %>
+                    </a>
+                  </li>
+                <% } else { %>
+                  <li class="page-item">
+                    <a class="page-link" href="/indexbackend/<%= i %>">
+                      <%= i %>
+                    </a>
+                  </li>
+                <% } %>
+                <% if (i == Number(current) + 4 && i < pages) { %>
+                   <li class="page-item disabled">
+                     <a class="page-link" href="#">...</a>
+                   </li>
+                <% } %>
+              <% } %>
+              <!-- LAST ITEM -->
+              <% if(current == pages) { %>
+                <li class="page-item disabled">
+                  <a class="page-link" href="#">
+                    Last
+                  </a>
+                </li>
+              <% } else { %>
+                <li class="page-item">
+                  <a class="page-link" href="/indexbackend/<%= pages %>">
+                    Last
+                  </a>
+                </li>
+              <% } %>
+            </ul>
+          </nav>
+        <% } %>
+      </div>
+    
+    
+
+
+
+ 
+
+
+<%include partials/_footer%>
+ 
+ 
