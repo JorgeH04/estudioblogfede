@@ -4,7 +4,6 @@ if (process.env.NODE_ENV !== 'production') {
 
 
 const path = require('path');
-const morgan = require('morgan');
 const express = require('express');
 const { format } = require('timeago.js');
 const engine = require('ejs-mate');
@@ -23,7 +22,6 @@ app.engine('ejs', engine);
 app.set('view engine', 'ejs');
 
 //middlewares
-app.use(morgan('dev'));
 app.use(express.urlencoded({extended: false}));
 
 app.use(express.static(path.join(__dirname, 'views')));

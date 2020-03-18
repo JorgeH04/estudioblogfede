@@ -348,49 +348,6 @@
 
 
 
-/*SERVICES*/
-
-.services {
-    
-  padding: 80px 0 80px;
-  text-align: center;
-}
-
-.services h2,
-.services h4 {
-  
-  color: #4c4c4c;
-  margin: 20px 0 20px;
-}
-
-
-.services p {
-  
-  color: #737373;
-  font-size: 14px;
-  padding-bottom: 40px;
-}
-
-
-.services i {
-  
-  height: 80px;
-  width: 80px;
-  font-size: 30px;
-  padding: 25px 20px;
-  border-radius: 50%;
-  background-color: #6699cc;
-  color: #fff;
-}
-
-
-@media(max-width:768px) {
-  
-  .services {
-      
-      padding: 30px;
-  }
-}
 
 
 /*PRICING*/
@@ -601,6 +558,7 @@
 /*FOOTER*/
 
 
+
 /*nuestros servicios*/
 
 .upper-card{ text-align: center; border: 1px solid rgba(47,228,237,0.37);}
@@ -612,111 +570,6 @@
      box-shadow: 0 0 5px 10px #888;
 }
 .choose{background-color: rgba(208,208,208,0.64)}
-
-
-
-
-
-.media{margin: 15px 0;}
-
-.media i{color: white; text-align: center; font-size: 30px; line-height:50px; padding:0 10px; border: 1px solid deepskyblue; border-radius: 50%; margin: 0 10px;background-color: deepskyblue;transition: 1s;}
-
-.media i:hover{color: deepskyblue; background-color: aliceblue; transition: 1s;}
-.media h5{font-weight: 400;}
-.my-btn{margin-left:13% ;}
-
-
-
-
-
-
-.hovereffect {
-width:100%;
-height:100%;
-float:left;
-overflow:hidden;
-position:relative;
-text-align:center;
-cursor:default;
-}
-
-.hovereffect .overlay {
-width:100%;
-height:100%;
-position:absolute;
-overflow:hidden;
-top:0;
-left:0;
-opacity:0;
-background-color:rgba(0,0,0,0.5);
--webkit-transition:all .4s ease-in-out;
-transition:all .4s ease-in-out
-}
-
-.hovereffect img {
-display:block;
-position:relative;
--webkit-transition:all .4s linear;
-transition:all .4s linear;
-}
-
-.hovereffect h2 {
-text-transform:uppercase;
-color:#fff;
-text-align:center;
-position:relative;
-font-size:17px;
-background:rgba(0,0,0,0.6);
--webkit-transform:translatey(-100px);
--ms-transform:translatey(-100px);
-transform:translatey(-100px);
--webkit-transition:all .2s ease-in-out;
-transition:all .2s ease-in-out;
-padding:10px;
-}
-
-.hovereffect a.info {
-text-decoration:none;
-display:inline-block;
-text-transform:uppercase;
-color:#fff;
-border:1px solid #fff;
-background-color:transparent;
-opacity:0;
-filter:alpha(opacity=0);
--webkit-transition:all .2s ease-in-out;
-transition:all .2s ease-in-out;
-margin:50px 0 0;
-padding:7px 14px;
-}
-
-.hovereffect a.info:hover {
-box-shadow:0 0 5px #fff;
-}
-
-.hovereffect:hover img {
--ms-transform:scale(1.2);
--webkit-transform:scale(1.2);
-transform:scale(1.2);
-}
-
-.hovereffect:hover .overlay {
-opacity:1;
-filter:alpha(opacity=100);
-}
-
-.hovereffect:hover h2,.hovereffect:hover a.info {
-opacity:1;
-filter:alpha(opacity=100);
--ms-transform:translatey(0);
--webkit-transform:translatey(0);
-transform:translatey(0);
-}
-
-.hovereffect:hover a.info {
--webkit-transition-delay:.2s;
-transition-delay:.2s;
-}
 
 
 
@@ -857,6 +710,26 @@ a.article:hover {
 
 
 
+.team-member {
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.team-member img {
+  width: 225px;
+  height: 225px;
+  border: 7px solid rgba(0, 0, 0, 0.1);
+}
+
+.team-member h4 {
+  margin-top: 25px;
+  margin-bottom: 0;
+  text-transform: none;
+}
+
+.team-member p {
+  margin-top: 0;
+}
 
 
 
@@ -866,6 +739,40 @@ a.article:hover {
 
 
 
+.features-icons {
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+}
+
+.features-icons .features-icons-item {
+  max-width: 20rem;
+}
+
+.features-icons .features-icons-item .features-icons-icon {
+  height: 7rem;
+}
+
+.features-icons .features-icons-item .features-icons-icon i {
+  font-size: 4.5rem;
+}
+
+.features-icons .features-icons-item:hover .features-icons-icon i {
+  font-size: 5rem;
+}
+
+
+
+.achivement{
+  height: 300px;
+  margin-top: 40px;
+  padding-bottom: 80px;
+  padding-top: 80px;
+  background-image: url(../img/servicioscuatro.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  color: #000
+      
+ }
 
 
 
